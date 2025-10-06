@@ -1,3 +1,4 @@
+
 from stats import get_word_count
 from stats import get_character_count
 from stats import sort_characters
@@ -13,8 +14,15 @@ def main():
     final_count = get_word_count(final_text)
     final_char_count = get_character_count(final_text)
     sorted_characters = sort_characters(final_char_count)
+
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
     print(f"Found {final_count} total words")
-    print(sorted_characters)
+    print("--------- Character Count -------")
+    for item in sorted_characters:
+        print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
     return
 
 main()
