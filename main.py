@@ -1,5 +1,6 @@
 from stats import get_word_count
 from stats import get_character_count
+from stats import sort_characters
 
 book = "books/frankenstein.txt"
 
@@ -9,11 +10,11 @@ def get_book_text(book):
 
 def main():
     final_text = get_book_text(book)
-    
     final_count = get_word_count(final_text)
-    print(f"Found {final_count} total words")
     final_char_count = get_character_count(final_text)
-    print(final_char_count)
+    sorted_characters = sort_characters(final_char_count)
+    print(f"Found {final_count} total words")
+    print(sorted_characters)
     return
 
 main()

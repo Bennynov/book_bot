@@ -13,4 +13,11 @@ def get_character_count(text):
                 character_dict[ch] = 0
           character_dict[ch] += 1
       return character_dict
-      
+
+def sort_characters(character_dict):
+    filtered_alpha_char = {}
+    for char, count in character_dict.items():
+        if char.isalpha():
+            filtered_alpha_char[char] = count
+            
+    return filtered_alpha_char
